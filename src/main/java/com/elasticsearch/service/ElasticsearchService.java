@@ -55,9 +55,9 @@ public class ElasticsearchService {
         //requestBuilder.setQuery(QueryBuilders.matchQuery("company", uuid));//匹配单个字段
         //requestBuilder.setQuery(QueryBuilders.multiMatchQuery(uuid, "company", "userName"));//多个字段匹配某一个值,搜索company中或userName中包含有uuid的文档（必须与uuid一致）
         //requestBuilder.setQuery(QueryBuilders.wildcardQuery("company", "*" + uuid + "*"));//模糊查询，?匹配单个字符，*匹配多个字符
-        //requestBuilder.setQuery(QueryBuilders.queryStringQuery(uuid).queryName("company"));
+        requestBuilder.setQuery(QueryBuilders.queryStringQuery(uuid).queryName("company"));
         //requestBuilder.setQuery(QueryBuilders.termQuery("company", uuid));
-        requestBuilder.setQuery(QueryBuilders.fuzzyQuery("company", "*" + uuid + "*"));
+        //requestBuilder.setQuery(QueryBuilders.fuzzyQuery("company", "*" + uuid + "*"));
 
         //复合查询
         /*QueryStringQueryBuilder queryString = QueryBuilders.queryStringQuery(uuid);
