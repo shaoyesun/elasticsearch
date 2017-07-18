@@ -69,10 +69,10 @@ public class ElasticsearchController {
         return true;
     }
 
-    @RequestMapping(value = "/queryById")
+    @RequestMapping(value = "/query")
     @ResponseBody
     public String queryById() {
-        return elasticsearchService.queryById("北京百迈");
+        return elasticsearchService.query("北京百迈");
     }
 
 }
